@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jangle Adventures | Explore Uganda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jangle Adventures — curated tours, gorilla tracking, cycling and cultural experiences across Uganda. Responsible travel, expert guides.">
+  <link rel="preload" as="image" href="./assets/safari.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta property="og:title" content="Jangle Adventures | Explore Uganda">
+  <meta property="og:description" content="Curated trekking, gorilla tracking, cycling and cultural trips across Uganda.">
+  </head>
+  <body>
+
+  <div class="topbar" role="banner">
+    <div class="topbar-inner container">
+      <div class="contact-links">
+        <a href="mailto:info@jangleadventures.ug"><i class="fas fa-envelope" aria-hidden="true"></i><span class="contact-text"> info@jangleadventures.ug</span></a>
+        <a href="tel:+256700000000"><i class="fas fa-phone" aria-hidden="true"></i><span class="contact-text"> +256 700 000000</span></a>
+      </div>
+      <nav class="topbar-social" aria-label="Social links">
+        <a class="social-link" href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-facebook-f" aria-hidden="true"></i>
+          <span class="visually-hidden">Facebook</span>
+        </a>
+        <a class="social-link" href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+          <span class="visually-hidden">Instagram</span>
+        </a>
+        <a class="social-link" href="#" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+          <span class="visually-hidden">Twitter</span>
+        </a>
+      </nav>
+    </div>
+  </div>
+
+<header class="navbar">
+  <div class="logo">Jangle<span>Adventures</span></div>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
+    <span class="hamburger"></span>
+  </button>
+  <nav class="nav-links" id="main-nav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#services">Tours</a>
+    <a href="blog.html">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="hero-slideshow" aria-hidden="true">
+    <img src="assets/safari.jpg" alt="Safari scene 1">
+    <img src="assets/safari2.jpg" alt="Safari scene 2">
+    <img src="assets/safari3.jpg" alt="Safari scene 3">
+    <img src="assets/safari4.jpg" alt="Safari scene 4">
+  </div>
+  <div class="hero-content">
+    <h1>Discover Uganda with Jangle Adventures</h1>
+    <p>Trekking • Gorilla Tracking • Cycling • Culture • Nature</p>
+    <div class="hero-ctas">
+      <a class="btn" href="#booking-form">Request a Tour Quote</a>
+      <a class="btn alt" href="https://wa.me/256700000000?text=Hi%2C%20I%27d%20like%20to%20request%20a%20tour%20quote" aria-label="Chat on WhatsApp">Talk to a Local Expert</a>
+    </div>
+
+    <div class="trust-badges" aria-hidden="true">
+      <span class="trust-badge">Licensed Operator</span>
+      <span class="trust-badge">Local Guides</span>
+      <span class="trust-badge">Responsible Travel</span>
+    </div>
+  </div>
+</section>
+
+<!-- Credibility strip: subtle local trust indicators -->
+<div class="credibility">
+  <div class="container cred-inner">
+    <div class="cred-line" aria-hidden="false">Based in Uganda • Local guides • Operating across national parks.</div>
+    <div class="cred-icons" role="list" aria-label="Credibility highlights">
+      <div class="cred-item" role="listitem">
+        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+        <span class="cred-text">Licensed Guides</span>
+      </div>
+      <div class="cred-item" role="listitem">
+        <i class="fas fa-map-marked-alt" aria-hidden="true"></i>
+        <span class="cred-text">Local Expertise</span>
+      </div>
+      <div class="cred-item" role="listitem">
+        <i class="fas fa-seedling" aria-hidden="true"></i>
+        <span class="cred-text">Responsible Tourism</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Search Destinations with Booking: search on left, booking on right -->
+<section class="search-section">
+  <div class="container">
+    <div class="search-card">
+      <div class="search-grid">
+        <form id="dest-search-form" role="search" class="search-box" onsubmit="return false;">
+          <label for="dest-search" class="visually-hidden">Search destinations</label>
+          <input id="dest-search" class="search-input" type="search" placeholder="Search destinations (e.g. Bwindi, Rwenzori)..." aria-label="Search destinations">
+          <button type="button" id="clear-search" class="btn small">Clear</button>
+          <button type="submit" class="visually-hidden">Search</button>
+        </form>
+        
+        <div class="filters" aria-hidden="false">
+          <div class="filter-row">
+            <label for="filter-destination" class="visually-hidden">Destination</label>
+            <select id="filter-destination">
+              <option value="">All destinations</option>
+              <option value="bwindi">Bwindi</option>
+              <option value="rwenzori">Rwenzori</option>
+              <option value="queen">Queen Elizabeth</option>
+              <option value="bunyonyi">Lake Bunyonyi</option>
+            </select>
+          </div>
+          <div class="filter-row">
+            <label for="filter-activity" class="visually-hidden">Activity</label>
+            <select id="filter-activity">
+              <option value="">Any activity</option>
+              <option value="gorilla">Gorilla Tracking</option>
+              <option value="mountain">Mountain</option>
+              <option value="safari">Safari</option>
+              <option value="retreat">Retreat</option>
+            </select>
+          </div>
+          <div class="filter-row">
+            <label for="filter-duration" class="visually-hidden">Duration</label>
+            <select id="filter-duration">
+              <option value="">Any duration</option>
+              <option value="1">1-2 days</option>
+              <option value="3">3-4 days</option>
+              <option value="5">5+ days</option>
+            </select>
+          </div>
+          <div class="filter-row budget-row">
+            <label class="visually-hidden" for="filter-min">Min budget</label>
+            <input id="filter-min" type="number" placeholder="Min USD" min="0">
+            <label class="visually-hidden" for="filter-max">Max budget</label>
+            <input id="filter-max" type="number" placeholder="Max USD" min="0">
+          </div>
+          <div class="filter-actions">
+            <button id="apply-filters" class="btn small" type="button">Apply Filters</button>
+            <button id="reset-filters" class="btn small" type="button">Reset</button>
+          </div>
+        </div>
+
+        <div class="popular-chips" aria-label="Popular searches">
+          <button type="button" class="chip" data-filter-key="activity" data-filter-value="gorilla">Gorilla Tracking</button>
+          <button type="button" class="chip" data-filter-key="duration" data-filter-value="2-3">2-3 days</button>
+          <button type="button" class="chip" data-filter-key="activity" data-filter-value="family">Family Friendly</button>
+          <button type="button" class="chip" data-filter-key="max" data-filter-value="500">Budget</button>
+        </div>
+
+        <aside class="search-booking">
+          <div class="booking-wrap-compact">
+            <div class="booking-info">
+              <h3>Request a Booking</h3>
+              <p class="muted">Quick request!! We'll follow up and reach out to you ASAP...</p>
+            </div>
+            <form id="booking-form" name="booking-request" class="booking-form compact" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+              <input type="hidden" name="form-name" value="booking-request">
+              <input type="hidden" name="bot-field" aria-hidden="true">
+              <label class="visually-hidden" for="booking-name">Your name</label>
+              <input id="booking-name" type="text" name="name" placeholder="Your name" required>
+              <label class="visually-hidden" for="booking-email">Your email</label>
+              <input id="booking-email" type="email" name="email" placeholder="Your email" required>
+              <label class="visually-hidden" for="booking-destination">Destination</label>
+              <select id="booking-destination" name="destination" required>
+                <option value="">Choose destination</option>
+                <option value="Bwindi Impenetrable Forest">Bwindi Impenetrable Forest</option>
+                <option value="Rwenzori Mountains">Rwenzori Mountains</option>
+                <option value="Queen Elizabeth NP">Queen Elizabeth NP</option>
+                <option value="Lake Bunyonyi">Lake Bunyonyi</option>
+              </select>
+              <button class="btn" type="submit">Request</button>
+            </form>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="container">
+    <h2>Our Experiences</h2>
+    <div class="service-grid">
+    <a class="service-card" href="#trekking">
+      <img class="service-thumb" src="assets/Rwenzori-Mountains-National-Park4.jpg" alt="Trekking" loading="lazy" width="320" height="180">
+      <div class="service-body">
+        <h3>Trekking</h3>
+        <p>Guided treks through the Mt. Rwenzori National Park.</p>
+      </div>
+    </a>
+
+    <a class="service-card" href="#cycling">
+      <img class="service-thumb" src="assets/Cycling-in-Bunyonyi.jpg" alt="Cycling Tours" loading="lazy" width="320" height="180">
+      <div class="service-body">
+        <h3>Cycling Tours</h3>
+        <p>Scenic day and multi-day cycling routes.</p>
+      </div>
+    </a>
+
+    <a class="service-card" href="#gorilla">
+      <img class="service-thumb" src="assets/bwindi gorillas.jfif" alt="Gorilla Tracking" loading="lazy" width="320" height="180">
+      <div class="service-body">
+        <h3>Gorilla Tracking</h3>
+        <p>Permits and expert guides for gorilla tracking.</p>
+      </div>
+    </a>
+
+    <a class="service-card" href="#mountain">
+      <img class="service-thumb" src="assets/Rwenzori-Mountains-National-Park4.jpg" alt="Mountain Tours" loading="lazy" width="320" height="180">
+      <div class="service-body">
+        <h3>Mountain Tours</h3>
+        <p>Explore highland trails and peaks.</p>
+      </div>
+    </a>
+
+    <a class="service-card" href="#cultural">
+      <img class="service-thumb" src="assets/safari.jpg" alt="Cultural Tourism" loading="lazy" width="320" height="180">
+      <div class="service-body">
+        <h3>Cultural Tourism</h3>
+        <p>Community visits and cultural experiences.</p>
+      </div>
+    </a>
+
+    <a class="service-card" href="#campsites">
+      <img class="service-thumb" src="assets/safari2.jpg" alt="Campsites" loading="lazy" width="320" height="180">
+      <div class="service-body">
+        <h3>Campsites</h3>
+        <p>Safe, scenic camping locations.</p>
+      </div>
+    </a>
+
+    <a class="service-card" href="#transport">
+      <img class="service-thumb" src="assets/vans.webp" alt="Tour Vans" loading="lazy" width="320" height="180">
+      <div class="service-body">
+        <h3>Tour Vans</h3>
+        <p>Comfortable transport for groups.</p>
+      </div>
+    </a>
+
+    <a class="service-card" href="#bikes">
+      <img class="service-thumb" src="assets/bikes.jpg" alt="Bikes" loading="lazy" width="320" height="180">
+      <div class="service-body">
+        <h3>Bikes</h3>
+        <p>Bike rentals and guided rides.</p>
+      </div>
+    </a>
+    </div>
+    <div class="section-cta text-center" style="margin-top:16px;">
+      <a class="btn" href="#booking-form">Request a Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- Meet Your Local Guides (short, authentic) -->
+<section class="meet-guides" aria-labelledby="meet-guides-title">
+  <div class="container">
+    <div class="meet-card card">
+      <img src="assets/safari3.jpg" alt="Samuel, lead guide" class="meet-thumb" width="96" height="96" loading="lazy">
+      <div class="meet-body">
+        <h3 id="meet-guides-title">Meet Your Local Guides</h3>
+        <p class="muted">Samuel leads our tracking teams with 15 years' experience. He is respectful and prioritizes your safety first...</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials">
+  <div class="container">
+    <h2>What Travelers Say</h2>
+    <div class="testimonials-grid">
+      <blockquote class="testimonial-card">
+        <div class="testimonial-inner">
+          <img src="assets/safari2.jpg" alt="Maria R., traveler" class="testimonial-avatar" width="64" height="64" loading="lazy">
+          <div class="testimonial-content">
+            <p>"An unforgettable gorilla trek. Our guide was knowledgeable and kind."</p>
+            <footer>Maria R., Spain</footer>
+          </div>
+        </div>
+      </blockquote>
+
+      <blockquote class="testimonial-card">
+        <div class="testimonial-inner">
+          <img src="assets/safari3.jpg" alt="James K., traveler" class="testimonial-avatar" width="64" height="64" loading="lazy">
+          <div class="testimonial-content">
+            <p>"Well organized, great local insight and excellent safety standards."</p>
+            <footer>James K., UK</footer>
+          </div>
+        </div>
+      </blockquote>
+
+      <blockquote class="testimonial-card">
+        <div class="testimonial-inner">
+          <img src="assets/giraffe.jpg" alt="Amina T., traveler" class="testimonial-avatar" width="64" height="64" loading="lazy">
+          <div class="testimonial-content">
+            <p>"Loved the cultural visits. Had so much fun."</p>
+            <footer>Amina T., Kenya</footer>
+          </div>
+        </div>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- Trust badges section (near footer) -->
+<section class="trust-section">
+  <div class="container text-center">
+    <div class="badges-row" aria-hidden="true">
+      <span class="trust-badge large">✔ Licensed Operator</span>
+      <span class="trust-badge large">✔ Local Guides</span>
+      <span class="trust-badge large">✔ Responsible Travel</span>
+    </div>
+  </div>
+</section>
+
+<!-- Social proof: international travelers (light, non-intrusive) -->
+<div class="social-proof" aria-hidden="false">
+  <div class="container">
+    <p class="social-proof-line"><span class="social-flags" aria-hidden="true">🇺🇸 🇬🇧 🇪🇺 🌍</span> Travelers from the USA, UK, Europe, and Africa explore with us.</p>
+  </div>
+</div>
+
+<section class="quick-links">
+  <div class="container">
+    <h2>Quick Links</h2>
+    <div class="quick-grid">
+      <a class="quick-card" href="#destinations">
+        <i class="fas fa-map-marked-alt" aria-hidden="true"></i>
+        <span>Destinations</span>
+      </a>
+      <a class="quick-card" href="#services">
+        <i class="fas fa-hiking" aria-hidden="true"></i>
+        <span>Tours</span>
+      </a>
+      <a class="quick-card" href="blog.html">
+        <i class="fas fa-blog" aria-hidden="true"></i>
+        <span>Blog</span>
+      </a>
+      <a class="quick-card" href="#contact">
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+        <span>Contact</span>
+      </a>
+      <a class="quick-card" href="#book">
+        <i class="fas fa-calendar-check" aria-hidden="true"></i>
+        <span>Book Now</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Tours / Popular Packages -->
+<section class="featured-tours">
+  <div class="container">
+    <h2>Featured Tours</h2>
+    <p class="muted text-center">Tours from USD 499. Custom pricing available for groups and extensions.</p>
+    <div class="tour-grid" style="margin-top:12px;">
+      <article class="tour-card">
+        <img src="assets/bwindi gorillas.jfif" alt="Bwindi Gorilla Trek" class="tour-thumb" loading="lazy" width="400" height="160">
+        <div class="tour-body">
+          <h3>Bwindi Gorilla Trek</h3>
+          <div class="tour-meta">
+            <span class="meta-item"><i class="fas fa-clock" aria-hidden="true"></i><span class="meta-text">3 days</span><span class="visually-hidden">Duration: 3 days</span></span>
+            <span class="meta-item"><i class="fas fa-tag" aria-hidden="true"></i><span class="meta-text">From <strong>USD 699</strong></span><span class="visually-hidden">Price from USD 699</span></span>
+            <span class="meta-stars" aria-hidden="true">
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star half"></i>
+            </span>
+            <span class="visually-hidden">4.9 out of 5</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="tour-card">
+        <img src="assets/Rwenzori-Mountains-National-Park4.jpg" alt="Rwenzori Mountain Climb" class="tour-thumb" loading="lazy" width="400" height="160">
+        <div class="tour-body">
+          <h3>Rwenzori Mountain Climb</h3>
+          <div class="tour-meta">
+            <span class="meta-item"><i class="fas fa-clock" aria-hidden="true"></i><span class="meta-text">5–7 days</span><span class="visually-hidden">Duration: 5 to 7 days</span></span>
+            <span class="meta-item"><i class="fas fa-tag" aria-hidden="true"></i><span class="meta-text">From <strong>USD 999</strong></span><span class="visually-hidden">Price from USD 999</span></span>
+            <span class="meta-stars" aria-hidden="true">
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star"></i>
+            </span>
+            <span class="visually-hidden">4.8 out of 5</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="tour-card">
+        <img src="assets/safari.jpg" alt="Queen Elizabeth Safari" class="tour-thumb" loading="lazy" width="400" height="160">
+        <div class="tour-body">
+          <h3>Queen Elizabeth Safari</h3>
+          <div class="tour-meta">
+            <span class="meta-item"><i class="fas fa-clock" aria-hidden="true"></i><span class="meta-text">2–4 days</span><span class="visually-hidden">Duration: 2 to 4 days</span></span>
+            <span class="meta-item"><i class="fas fa-tag" aria-hidden="true"></i><span class="meta-text">From <strong>USD 499</strong></span><span class="visually-hidden">Price from USD 499</span></span>
+            <span class="meta-stars" aria-hidden="true">
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star"></i>
+            </span>
+            <span class="visually-hidden">4.7 out of 5</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="tour-card">
+        <img src="assets/Cycling-in-Bunyonyi.jpg" alt="Lake Bunyonyi Retreat" class="tour-thumb" loading="lazy" width="400" height="160">
+        <div class="tour-body">
+          <h3>Lake Bunyonyi Retreat</h3>
+          <div class="tour-meta">
+            <span class="meta-item"><i class="fas fa-clock" aria-hidden="true"></i><span class="meta-text">2 days</span><span class="visually-hidden">Duration: 2 days</span></span>
+            <span class="meta-item"><i class="fas fa-tag" aria-hidden="true"></i><span class="meta-text">From <strong>USD 399</strong></span><span class="visually-hidden">Price from USD 399</span></span>
+            <span class="meta-stars" aria-hidden="true">
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star"></i>
+            </span>
+            <span class="visually-hidden">4.8 out of 5</span>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="section-cta text-center" style="margin-top:16px;">
+      <a class="btn" href="#booking-form">Book a Package</a>
+    </div>
+    <!-- Expert tip: seasonal travel highlight (subtle, non-promotional) -->
+    <div class="expert-tip" role="note" aria-label="Expert travel tip">
+      <div class="container">
+        <div class="tip-inner">
+          <i class="fas fa-info-circle" aria-hidden="true"></i>
+          <div class="tip-text"><strong>Best time for Gorilla Tracking:</strong> June–September, December–February.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Safety & Responsibility compact strip -->
+<section class="safety-responsibility" aria-labelledby="safety-label">
+  <div class="container safety-inner">
+    <div id="safety-label" class="visually-hidden">Safety and Responsibility</div>
+    <div class="safety-grid" role="list" aria-label="Safety and responsibility highlights">
+      <div class="safety-item" role="listitem">
+        <i class="fas fa-tree" aria-hidden="true"></i>
+        <span class="safety-text">Park‑compliant activities</span>
+      </div>
+      <div class="safety-item" role="listitem">
+        <i class="fas fa-first-aid" aria-hidden="true"></i>
+        <span class="safety-text">First‑aid trained guides</span>
+      </div>
+      <div class="safety-item" role="listitem">
+        <i class="fas fa-hands-helping" aria-hidden="true"></i>
+        <span class="safety-text">Community‑support tourism</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="destinations">
+  <div class="container">
+    <h2>Top Rated Destinations</h2>
+    <div class="destination-grid">
+      <a class="destination-card" href="#bwindi" data-key="bwindi" data-activity="gorilla" data-duration="3" data-price="699">
+      <img class="destination-thumb" src="assets/bwindi gorillas.jfif" alt="Bwindi Impenetrable Forest" loading="lazy" width="400" height="160">
+        <div class="destination-body">
+          <h3>Bwindi Impenetrable Forest</h3>
+          <div class="rating">★★★★★ <span class="muted">(4.9)</span></div>
+          <p class="dest-excerpt">Home to mountain gorillas — immersive trekking and tracking experiences.</p>
+        </div>
+      </a>
+
+      <a class="destination-card" href="#rwenzori" data-key="rwenzori" data-activity="mountain" data-duration="7" data-price="999">
+        <img class="destination-thumb" src="assets/Rwenzori-Mountains-National-Park4.jpg" alt="Rwenzori Mountains" loading="lazy" width="400" height="160">
+        <div class="destination-body">
+          <h3>Rwenzori Mountains</h3>
+          <div class="rating">★★★★★ <span class="muted">(4.8)</span></div>
+          <p class="dest-excerpt">Challenging treks, snow-capped peaks and dramatic scenery.</p>
+        </div>
+      </a>
+
+      <a class="destination-card" href="#queen-elizabeth" data-key="queen" data-activity="safari" data-duration="3" data-price="499">
+      <img class="destination-thumb" src="assets/elephant.jpg" alt="Queen Elizabeth National Park" loading="lazy" width="400" height="160">
+        <div class="destination-body">
+          <h3>Queen Elizabeth NP</h3>
+          <div class="rating">★★★★★ <span class="muted">(4.7)</span></div>
+          <p class="dest-excerpt">Wildlife safaris, boat cruises and diverse ecosystems.</p>
+        </div>
+      </a>
+
+      <a class="destination-card" href="#bunyonyi" data-key="bunyonyi" data-activity="retreat" data-duration="2" data-price="399">
+      <img class="destination-thumb" src="assets/Cycling-in-Bunyonyi.jpg" alt="Lake Bunyonyi" loading="lazy" width="400" height="160">
+        <div class="destination-body">
+          <h3>Lake Bunyonyi</h3>
+          <div class="rating">★★★★★ <span class="muted">(4.8)</span></div>
+          <p class="dest-excerpt">Peaceful lakeside retreats with canoe trips and island visits.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="ratings">
+  <h2>Why Travelers Trust Us</h2>
+  <div class="rating-box">
+    <h3>4.8 / 5</h3>
+    <p>Based on 320+ verified traveler reviews</p>
+    <div class="stars">★★★★★</div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="how-it-works">
+  <div class="container">
+    <h2>How It Works</h2>
+    <div class="how-grid">
+      <div class="step-card">
+        <div class="step-icon"><i class="fas fa-map"></i></div>
+        <strong>1. Plan</strong>
+        <p class="muted">Tell us your dates, interests and group size — we propose an itinerary.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-icon"><i class="fas fa-calendar-check"></i></div>
+        <strong>2. Book</strong>
+        <p class="muted">Confirm dates and we handle permits, transport and accommodation.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-icon"><i class="fas fa-plane-departure"></i></div>
+        <strong>3. Travel</strong>
+        <p class="muted">Enjoy guided experiences with local experts and support on the ground.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blog">
+  <div class="container">
+    <h2>From Our Blog</h2>
+    <div class="blog-wrap">
+      <div class="blog-featured">
+        <a href="posts/post-1.html" class="featured-link">
+            <figure class="featured-figure">
+                  <picture>
+                    <source type="image/webp" srcset="assets/murchisonfalls.jpg">
+                    <img src="assets/murchisonfalls.jpg" alt="Gorilla tracking in forest" width="700" height="320" loading="lazy">
+                  </picture>
+                </figure>
+          <div class="featured-content">
+            <div class="post-meta">Jan 15, 2026 • By Jangle Adventures</div>
+            <h3>Best Time for Gorilla Tracking in Uganda</h3>
+            <p class="post-excerpt">Discover the optimal months, what to pack, and how to prepare for a memorable gorilla tracking experience in Bwindi.</p>
+            <span class="read-more">Read article →</span>
+          </div>
+        </a>
+      </div>
+
+      <aside class="blog-list">
+        <article class="post-card">
+          <img src="assets/Cycling-in-Bunyonyi.jpg" alt="Cycling routes" class="post-thumb" width="92" height="72" loading="lazy">
+          <div class="post-info">
+            <div class="post-meta">Dec 20, 2025</div>
+            <h4>Top Cycling Routes in Western Uganda</h4>
+            <p class="post-excerpt small">Scenic and adventurous cycling trails across rolling hills and lakes.</p>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <img src="assets/safari.jpg" alt="Cultural experiences" class="post-thumb" width="92" height="72" loading="lazy">
+          <div class="post-info">
+            <div class="post-meta">Nov 12, 2025</div>
+            <h4>Exploring Uganda’s Cultural Heritage</h4>
+            <p class="post-excerpt small">Meet communities and experience authentic traditions.</p>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <img src="assets/murchisonfalls.jpg" alt="Packing tips" class="post-thumb" width="92" height="72" loading="lazy">
+          <div class="post-info">
+            <div class="post-meta">Oct 02, 2025</div>
+            <h4>Packing Tips for a Uganda Trek</h4>
+            <p class="post-excerpt small">Lightweight gear, footwear, and health precautions for active travel.</p>
+          </div>
+        </article>
+      </aside>
+    </div>
+
+    <div class="blog-actions text-center" style="margin-top:22px;">
+      <a class="btn" href="blog.html">See all articles</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<section class="footer-links">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h3>Useful Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#services">Tours</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="mailto:info@jangleadventures.ug">info@jangleadventures.ug</a></li>
+        <li><a href="tel:+256700000000">+256 700 000000</a></li>
+      </ul>
+      <!-- Callback mini-form: static, opens email client to send callback request -->
+      <form id="callback-form" class="callback-mini" onsubmit="return false;" aria-label="Request a call back">
+        <label class="visually-hidden" for="cb-name">Your name</label>
+        <input id="cb-name" name="cb_name" type="text" placeholder="Your name" required>
+        <label class="visually-hidden" for="cb-phone">Phone number</label>
+        <input id="cb-phone" name="cb_phone" type="tel" placeholder="Phone (e.g. +256...)" required>
+        <button type="submit" class="btn small">Request Call</button>
+      </form>
+    </div>
+    <div class="footer-col">
+      <h3>Follow</h3>
+      <div class="social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container text-center">
+    <p>© 2026 Jangle Adventures | Explore Uganda.</p>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+
+<!-- Back to top button (appears above WhatsApp) -->
+<a href="#top" class="back-to-top" aria-label="Back to top">
+  <i class="fas fa-chevron-up" aria-hidden="true"></i>
+</a>
+
+<a class="whatsapp-fab" href="https://wa.me/256700000000?text=Hi%2C%20I%27d%20like%20to%20talk%20to%20a%20local%20expert" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer">
+  <i class="fab fa-whatsapp" aria-hidden="true"></i>
+</a>
+
+</body>
+</html>
